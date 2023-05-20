@@ -29,7 +29,7 @@ const list = [producto1, producto2, producto3, producto4, producto5];
 const suma = (a, b) => a + b ;
 const resta = (a, b) => a - b ;
 const multiplicacion = (a, b) => a * b ;
-const TOTAL = cart.reduce ((a, b) => a + b, 0);
+
 
 function catalogo (){
 alert("Este es nuestro catálogo de productos")
@@ -136,8 +136,8 @@ function seguirComprando(){
 }
 
 function mostrarCarrito(){
-    console.log(TOTAL);
-    alert("Usted tiene: " + cart.length + " artículos añadidos a su carrito. Los costos de cada uno son: " + cart + " . El total a abonar es de: $" + TOTAL)
+    console.log(cart.reduce ((a, b) => a + b, 0));
+    alert("Usted tiene: " + cart.length + " artículos añadidos a su carrito. Los costos de cada uno son: " + cart + " . El total a abonar es de: $" + cart.reduce ((a, b) => a + b, 0))
     modoDePago()
 
 }
